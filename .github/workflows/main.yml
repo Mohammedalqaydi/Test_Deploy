@@ -15,7 +15,7 @@
                     SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
                     SERVER_2_HOST: ${{ secrets.SERVER_2_HOST }}
                   run:  echo "$SSH_PRIVATE_KEY" > ~/.ssh/github_actions |  
-                    chmod 600 ~/.ssh/github_actions
+                    chmod 600 ~/.ssh/github_actions |
                     ssh -i ~/.ssh/github_actions $SSH_USERNAME@$SERVER_2_HOST "cd /docker-compose-flask-app && git pull && docker compose up -d --build"
                 # - name: Set up Go
         #   uses: actions/setup-go@v3
