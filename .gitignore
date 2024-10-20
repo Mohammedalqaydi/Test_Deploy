@@ -1,0 +1,5 @@
+.terraform
+.terraform.lock.hcl
+variable.tf
+key.pem
+key.tf
