@@ -1,4 +1,4 @@
- 
+name: deploy-image-to-Http-servers 
  on:
     push:
       branches:
@@ -9,7 +9,7 @@
      runs-on: self-hosted
     
      steps:
-      - name: Deploy to server 2
+      - name: Deploy to servers
         env:
           SSH_AUTH_SOCK: /tmp/ssh_agent.sock
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
